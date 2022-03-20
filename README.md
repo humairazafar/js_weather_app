@@ -1,7 +1,7 @@
 <img width="1440" alt="Screen Shot 2022-03-19 at 12 20 03 PM" src="https://user-images.githubusercontent.com/75461281/159131488-e97d3c94-c978-4ea8-9a5e-42085c69c22a.png">
 
 ### HamaraWeather
-This is app will be using the accu weather api to display weather condition in city of the world. In urdu language, 'Hamara' means our, you can translate the name as 'OurWeather'app 😄 🇵🇰
+This is app will be using the accu weather api to display weather conditions in any city of the world. In urdu language, 'Hamara' means 'our', you can translate the name as 'OurWeather'app 😄 🇵🇰
 ### file folder
 The files in the project contain an index.html file, a styles.css file, and a folder for javascript. The folder, scripts has two files, app.js for DOM manipulation and forecast.js for API calls, async and await code. 
 
@@ -35,4 +35,16 @@ the index.html file has links to bootstarp cdn, link to our styles.css file and 
          <div class="display-4 my-4">
            <span>temp</span>
            <span>&deg;c</span>
+```
+#### styles.css
+In our css file, we have given the background a light gery color, some etter spacing and font sizing. We have also styled our container to ensure that everything is contained and not too wide with these simple styling techniques:
+``` 
+body{
+  background: #eeedec;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
+.container{
+  max-width: 400px;
+}
 ```
