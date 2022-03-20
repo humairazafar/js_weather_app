@@ -1,3 +1,5 @@
+<img width="1440" alt="Screen Shot 2022-03-20 at 3 20 33 PM" src="https://user-images.githubusercontent.com/75461281/159184476-86244e8e-c4b9-45a4-bf84-a93064bad121.png">
+
 <img width="1440" alt="Screen Shot 2022-03-19 at 12 20 03 PM" src="https://user-images.githubusercontent.com/75461281/159131488-e97d3c94-c978-4ea8-9a5e-42085c69c22a.png">
 
 ### HamaraWeather
