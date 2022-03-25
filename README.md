@@ -50,3 +50,33 @@ body{
   max-width: 400px;
 }
 ```
+
+### forecast.js
+The code in the file deals with interacting with the api calls, its makes the call to the api, and get data. There two functions in the file, one gets the data froim teh api calls, store the city id and the second function received that city id from the weatherdets and show the weather (current) condition in that city. 
+````
+onst getWeather = async (id) => {
+
+  const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
+
+  const query = `${id}?apikey=${key}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+
+  return data[0];
+
+};
+````
+The second function grabs the city id and makes another call to the api to gets the current weather conditions for that city:
+```
+const getCity = async (city) => {
+  
+  const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
+  const query = `?apikey=${key}&q=${city}`;
+
+  const response = await fetch(base + query);
+  const data = await response.json();
+ return (data[0]);
+
+};
+```
