@@ -1,4 +1,10 @@
-const key = '	MGwKbSzGkvTQ5ZfzmJlijcpCLvmRuJmV';
+class Forecast{
+  constructor(){
+    t
+  }
+}
+
+
 
 //get weather information for a city
 
