@@ -80,3 +80,36 @@ const getCity = async (city) => {
 
 };
 ```
+### Introducing class in the project
+Finally, we introduce the class in JS forcast file, we crrate a forcast class that has the constructor to set up the properties for the class. These properties are the URL base we need to get data for city and weather.
+```
+class Forecast{
+  constructor(){
+    this.key = 'MGwKbSzGkvTQ5ZfzmJlijcpCLvmRuJmV';
+    this.weatherURI = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    this.cityURI = 'http://dataservice.accuweather.com/locations/v1/cities/search';
+  }
+  ````
+  Then we async methods insiode the class to get city and weather. 
+  ```
+ async updateCity(city){
+    const cityDets = await this.getCity(city);
+    const weather = await this.getWeather(cityDets.Key);
+    return {cityDets,  weather };
+  }
+  async getCity(city){
+      const query = `?apikey=${this.key}&q=${city}`;
+      const response = await fetch(this.cityURI + query);
+      const data = await response.json();
+      return data[0];
+  }
+
+  async getWeather(id){
+    const query = `${id}?apikey=${this.key}`;
+    const response = await fetch(this.weatherURI + query);
+    const data = await response.json();
+    return data[0];
+  }
+}
+```
+In our app.js file we created a new instance of forcast class with those porperties and methods attached to it, and change the call to updateCity with forcast class and passing the city as argument, thus starting the chain of the functions to get and display the data in our app. 
